@@ -7,7 +7,7 @@ package account;
 
 /**
  *
- * @author Sivagama
+ * @author GURPREET SINGH
  */
 public class Account {
 
@@ -40,6 +40,10 @@ public class Account {
             balance=getBalance()-amount;
 
         }
+        public void newbalance(double amount){
+            
+            
+        }
         
      /**The getter for the balance
      * @return the balance
@@ -62,6 +66,9 @@ public class Account {
      */
     public String getUser() {
         return user;
+    }
+    public double finalbalance(){
+        return ((this.interestRate*100/100)*this.balance)+this.balance;
     }
     
     
