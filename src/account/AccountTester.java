@@ -21,6 +21,7 @@ public class AccountTester {
         Scanner sc=new Scanner(System.in);
         double bal=sc.nextDouble();
         
+        
         System.out.println("Please enter the unique user name:");
         sc.nextLine();
         String user=sc.nextLine();
@@ -28,7 +29,14 @@ public class AccountTester {
         Account a=new Account(bal,user);
         ac[0]=a;
              
-        System.out.println("The balance is: "+a.getBalance());  
-        System.out.println("The InterestRate per month is "+a.getInterestRate());
+        if(bal>50.00){
+            System.out.println("account created ");
+            System.out.println("The balance is: "+a.getBalance());  
+            System.out.println("The InterestRate per month is "+a.getInterestRate());
+            System.out.println("The InterestRate per month is "+a.finalbalance());
+        }
+        else{
+            System.out.println("account not created");
+        }
     }
 }
